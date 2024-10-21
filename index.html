@@ -5,66 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Business</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
     <header class="navbar">
         <div class="logo">Your Business</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up">
             <h1>Welcome to Your Business</h1>
             <p>We deliver innovative solutions to help your business succeed.</p>
-            <a href="#services" class="cta-button">Explore Services</a>
+            <button>Explore Services</button>
         </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>Our mission is to empower companies with the tools they need to thrive in today’s competitive market. We pride ourselves on delivering exceptional solutions tailored to each client’s needs.</p>
     </section>
 
     <section id="services" class="services">
         <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-item">
+        <div class="service-cards">
+            <div class="card" data-aos="fade-right">
+                <i class="fas fa-lightbulb"></i>
                 <h3>Consulting</h3>
-                <p>We provide expert advice to grow your business strategically.</p>
+                <p>Expert advice to help you grow strategically.</p>
             </div>
-            <div class="service-item">
+            <div class="card" data-aos="fade-up">
+                <i class="fas fa-laptop-code"></i>
                 <h3>Web Development</h3>
-                <p>We create dynamic, user-friendly websites and apps.</p>
+                <p>We create responsive and user-friendly websites.</p>
             </div>
-            <div class="service-item">
+            <div class="card" data-aos="fade-left">
+                <i class="fas fa-bullhorn"></i>
                 <h3>Marketing</h3>
-                <p>Our marketing strategies will help you reach the right audience.</p>
+                <p>Our strategies help you reach the right audience.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form action="#">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Your Business. All rights reserved.</p>
+    <footer class="footer">
+        <p>© 2024 Your Business. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
